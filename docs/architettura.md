@@ -77,7 +77,6 @@ sezione [BIRD / Babel](https://github.com/mikysal78/openwisp2#babel).
 | `*.luci.ninux-nnxx.it` | CNAME di openwisp | proxy LuCI, un host per router |
 | `gw.ninux-nnxx.it` | router di confine (`194.28.98.57`) | log e gestione del confine |
 | `dyn.ninux-nnxx.it` | zona dinamica | DDNS dei router con IP variabile |
-| `docs.ninux-nnxx.it` | GitHub Pages | questa guida |
 
 ## Flussi principali
 

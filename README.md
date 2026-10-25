@@ -2,11 +2,11 @@
 
 🇮🇹 La guida passo passo per ricostruire l'infrastruttura di **NINUX Basilicata**:
 Proxmox, DNS, OpenWISP, i moduli per OpenWISP, il firmware OpenWrt con Jenkins
-e l'app Android. **👉 https://docs.ninux-nnxx.it**
+e l'app Android. **👉 https://mikysal78.github.io/ninux-basilicata-infra/**
 
 🇬🇧 Step-by-step guide to rebuild the **NINUX Basilicata** infrastructure:
 Proxmox, DNS, OpenWISP, the OpenWISP modules, the OpenWrt firmware with Jenkins
-and the Android app. **👉 https://docs.ninux-nnxx.it/en/**
+and the Android app. **👉 https://mikysal78.github.io/ninux-basilicata-infra/en/**
 
 ## Sviluppo / Development
 

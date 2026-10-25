@@ -77,7 +77,6 @@ Details (costs, filters, topology script) are in the openwisp2 README, section
 | `*.luci.ninux-nnxx.it` | CNAME of openwisp | LuCI proxy, one host per router |
 | `gw.ninux-nnxx.it` | border router (`194.28.98.57`) | logs and management of the border router |
 | `dyn.ninux-nnxx.it` | dynamic zone | DDNS of routers with a changing IP |
-| `docs.ninux-nnxx.it` | GitHub Pages | this guide |
 
 ## Main flows
 

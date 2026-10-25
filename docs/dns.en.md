@@ -54,9 +54,6 @@ zone:
         - "*.luci"     # LuCI proxy: <uuid>.luci.ninux-nnxx.it
     - name: "gw"
       ip: "194.28.98.57"   # border router
-  cname:
-    - name: "docs"
-      target: "mikysal78.github.io."   # this guide (GitHub Pages)
 ```
 
 !!! note

@@ -1,6 +1,6 @@
 site_name: NINUX Basilicata — infrastruttura
 site_description: "Come ricostruire passo passo l'infrastruttura di NINUX Basilicata: Proxmox, DNS, OpenWISP, firmware OpenWrt, moduli e app."
-site_url: https://docs.ninux-nnxx.it/
+site_url: https://mikysal78.github.io/ninux-basilicata-infra/
 repo_url: https://github.com/mikysal78/ninux-basilicata-infra
 repo_name: mikysal78/ninux-basilicata-infra
 edit_uri: edit/main/docs/
