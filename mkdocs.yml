@@ -1,0 +1,98 @@
+site_name: NINUX Basilicata — infrastruttura
+site_description: "Come ricostruire passo passo l'infrastruttura di NINUX Basilicata: Proxmox, DNS, OpenWISP, firmware OpenWrt, moduli e app."
+site_url: https://docs.ninux-nnxx.it/
+repo_url: https://github.com/mikysal78/ninux-basilicata-infra
+repo_name: mikysal78/ninux-basilicata-infra
+edit_uri: edit/main/docs/
+copyright: NINUX Basilicata — testi CC BY-SA 4.0
+
+theme:
+  name: material
+  language: it
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Tema scuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Tema chiaro
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          default: true
+          name: Italiano
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: NINUX Basilicata — infrastructure
+          nav_translations:
+            Introduzione: Introduction
+            Architettura: Architecture
+            Ricostruzione: Rebuild
+            1. Proxmox: 1. Proxmox
+            2. DNS e certificati: 2. DNS and certificates
+            3. OpenWISP: 3. OpenWISP
+            4. Moduli per OpenWISP: 4. OpenWISP modules
+            5. Firmware e Jenkins: 5. Firmware and Jenkins
+            6. Router e rete: 6. Routers and network
+            7. App Android: 7. Android app
+            Gestione: Operations
+
+nav:
+  - Introduzione: index.md
+  - Architettura: architettura.md
+  - Ricostruzione:
+      - 1. Proxmox: proxmox.md
+      - 2. DNS e certificati: dns.md
+      - 3. OpenWISP: openwisp.md
+      - 4. Moduli per OpenWISP: moduli.md
+      - 5. Firmware e Jenkins: firmware.md
+      - 6. Router e rete: router.md
+      - 7. App Android: app.md
+  - Gestione: gestione.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
