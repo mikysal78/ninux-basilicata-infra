@@ -43,9 +43,18 @@ Privacy policy: [App privacy policy](privacy-app.md).
 
 ## Become a tester
 
-The app is coming to Google Play too. To register as a tester write to
-[app@ninux-nnxx.it](mailto:app@ninux-nnxx.it?subject=openwisp-android%20tester)
-with the Google account you use on the phone.
+The app is in closed testing on Google Play. To take part:
+
+1. join the Google group
+   [openwisp-android-testers](https://groups.google.com/g/openwisp-android-testers)
+   with the Google account you use on the phone;
+2. accept the invitation to the test from
+   [play.google.com/apps/testing/it.ninuxnnxx.openwisp](https://play.google.com/apps/testing/it.ninuxnnxx.openwisp)
+   (it works as soon as Google approves the first test release) and install
+   the app from Google Play.
+
+Google asks testers to keep it installed for at least 14 days before the app
+is published for everyone.
 
 ## Releases
 
