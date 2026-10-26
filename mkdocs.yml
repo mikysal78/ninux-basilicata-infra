@@ -64,6 +64,7 @@ plugins:
             6. Router e rete: 6. Routers and network
             7. App Android: 7. Android app
             Gestione: Operations
+            Privacy dell'app: App privacy policy
 
 nav:
   - Introduzione: index.md
@@ -77,6 +78,7 @@ nav:
       - 6. Router e rete: router.md
       - 7. App Android: app.md
   - Gestione: gestione.md
+  - Privacy dell'app: privacy-app.md
 
 markdown_extensions:
   - admonition

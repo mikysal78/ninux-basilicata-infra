@@ -39,6 +39,8 @@ password: the password is only used to get the API token and is never stored.
 
 The openwisp2 playbook already includes both APIs.
 
+Privacy policy: [App privacy policy](privacy-app.md).
+
 ## Become a tester
 
 The app is coming to Google Play too. To register as a tester write to

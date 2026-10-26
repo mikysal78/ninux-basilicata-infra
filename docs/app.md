@@ -40,6 +40,8 @@ salvata.
 
 Il playbook openwisp2 include già entrambe le API.
 
+Informativa privacy: [Privacy dell'app](privacy-app.md).
+
 ## Diventa tester
 
 L'app arriverà anche su Google Play. Per registrarti come tester scrivi a
