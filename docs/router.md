@@ -45,8 +45,10 @@ Poi, nella pagina del device:
 - **802.11s** sulla 2.4 GHz, `mesh_id` `ninux-mesh`, cifrata con **SAE**
   (WPA3): su 802.11s OpenWrt usa sempre SAE. La chiave è la variabile
   `mesh_password` del template, uguale per tutti i nodi.
-- Babel usa la mesh (`br-mesh`) come collegamento radio: costo più alto del
-  cavo, più basso della VPN.
+- Babel usa la mesh (`br-mesh`) come collegamento radio: costo da 256 in su,
+  che cresce con le perdite di pacchetti. Costa sempre più del cavo (96) e,
+  finché il link è buono, meno della VPN (600): vedi
+  [Architettura](architettura.md#la-rete-dei-router).
 - I nodi senza Internet propria prendono la default route dai vicini della
   mesh con OSPF.
 

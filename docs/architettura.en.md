@@ -54,8 +54,19 @@ flowchart TB
 | Hotspot | captive portal network (uspot) | free Wi-Fi with RADIUS login |
 
 Routing between nodes is done by **Babel** (BIRD): every node announces its LAN
-and learns the others. Costs are set so that **cable beats radio and radio
-beats VPN**. The default route never goes through Babel: every node reaches the
+and learns the others. Every link has a **cost**, computed by Babel from its
+`rxcost`; the **metric** of a route is the sum of the costs of the links it
+crosses, and the lowest one wins.
+
+| Link | `rxcost` | Cost |
+|---|---|---|
+| Cable | 96 | fixed |
+| Radio (802.11s mesh) | 256 | from 256 up: it grows with packet loss (ETX) |
+| ZeroTier VPN | 600 | fixed |
+
+So **cable always beats radio**, and a **good radio link beats the VPN**; a
+badly degraded radio link can cost more than 600, and then Babel goes through
+the VPN. The default route never goes through Babel: every node reaches the
 Internet through its own connection, and nodes without one learn it from their
 mesh neighbours via OSPF.
 
