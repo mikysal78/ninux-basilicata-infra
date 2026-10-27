@@ -19,6 +19,18 @@ le API REST di OpenWISP: sul server non si installa niente.
 - elenco degli accessi creati, con ristampa e stato letto dal server;
 - il **superuser** sceglie l'organizzazione, l'**operatore** vede solo la sua.
 
+Le schermate usano dati di fantasia («Hotel Ninux Basilicata»).
+
+![Nuovo accesso: ospite con nome, durata in giorni e anteprima del biglietto](assets/voucher/new.png)
+
+![Accessi creati: ristampa, disattivazione e stato letto dal server](assets/voucher/history.png)
+
+![Impostazioni: server, organizzazione, gruppo RADIUS, logo e dati della struttura](assets/voucher/settings.png)
+
+| Biglietto del foglio A4 | Scontrino 58 mm |
+|---|---|
+| ![Biglietto A4](assets/voucher/ticket-a4.png) | ![Scontrino 58 mm](assets/voucher/ticket-58mm.png){ width="220" } |
+
 ## Installazione
 
 Scarica l'eseguibile dalle

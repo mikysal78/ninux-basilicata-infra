@@ -19,6 +19,19 @@ uses the OpenWISP REST API: nothing to install on the server.
 - the **superuser** chooses the organization, an **operator** sees only their
   own.
 
+The screenshots use made-up data ("Hotel Ninux Basilicata"); the interface is also
+available in English.
+
+![New access: named guest, duration in days and ticket preview](assets/voucher/new.png)
+
+![Created accounts: reprint, deactivation and status read from the server](assets/voucher/history.png)
+
+![Settings: server, organization, RADIUS group, logo and venue details](assets/voucher/settings.png)
+
+| Ticket from the A4 sheet | 58 mm receipt |
+|---|---|
+| ![A4 ticket](assets/voucher/ticket-a4.png) | ![58 mm receipt](assets/voucher/ticket-58mm.png){ width="220" } |
+
 ## Installation
 
 Download the executable from the
