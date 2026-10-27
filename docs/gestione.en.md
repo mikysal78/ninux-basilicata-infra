@@ -10,6 +10,7 @@
 | Router firmware | new Jenkins build, then upgrade from OpenWISP (never the border router, see [chapter 5](firmware.md)) |
 | DNS | ansible-dns playbook; BIND as in its README |
 | App | release from a tag, see [chapter 7](app.md) |
+| Voucher program | release from a tag, see [chapter 8](voucher.md) |
 
 OpenWISP security advisories arrive by email and on
 [GitHub Security Advisories](https://github.com/openwisp). On the server,

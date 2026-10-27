@@ -63,6 +63,7 @@ plugins:
             5. Firmware e Jenkins: 5. Firmware and Jenkins
             6. Router e rete: 6. Routers and network
             7. App Android: 7. Android app
+            8. Accessi Wi-Fi a tempo: 8. Time-limited Wi-Fi access
             Gestione: Operations
             Privacy dell'app: App privacy policy
 
@@ -77,6 +78,7 @@ nav:
       - 5. Firmware e Jenkins: firmware.md
       - 6. Router e rete: router.md
       - 7. App Android: app.md
+      - 8. Accessi Wi-Fi a tempo: voucher.md
   - Gestione: gestione.md
   - Privacy dell'app: privacy-app.md
 

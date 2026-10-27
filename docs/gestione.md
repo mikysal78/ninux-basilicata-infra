@@ -10,6 +10,7 @@
 | Firmware dei router | nuova build Jenkins, poi aggiornamento da OpenWISP (mai il router di confine, vedi [capitolo 5](firmware.md)) |
 | DNS | playbook di ansible-dns; BIND come da README |
 | App | release dal tag, vedi [capitolo 7](app.md) |
+| Programma voucher | release dal tag, vedi [capitolo 8](voucher.md) |
 
 Gli avvisi di sicurezza di OpenWISP arrivano per email e su
 [GitHub Security Advisories](https://github.com/openwisp). Sul server,

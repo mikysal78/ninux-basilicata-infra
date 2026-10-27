@@ -154,6 +154,13 @@ of ansible-dns.
   and the sites you want reachable without login.
 - The portal certificate on the routers (`wifiauth`) is refreshed every night
   by the `sync_uspot_cert.py` cron job.
+- The hotspot network name is the template variable `hotspot_ssid` (default
+  `NINUX Free WiFi`): change it in each organization's copy of the template or
+  in a single router's variables.
+- In the organization YAML the login field is `type: "text"`, so people log in
+  with email, phone number or username: the vouchers of
+  [chapter 8](voucher.md) need it. With `type: "email"` the browser rejects
+  usernames.
 
 ### 7. Babel topology
 

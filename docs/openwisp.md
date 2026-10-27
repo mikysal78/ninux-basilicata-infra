@@ -154,6 +154,12 @@ Il template DDNS usa la chiave TSIG della zona `dyn` di ansible-dns.
   social e i siti che vuoi raggiungibili senza login.
 - Il certificato del portale sui router (`wifiauth`) viene aggiornato ogni
   notte dal cron `sync_uspot_cert.py`.
+- Il nome della rete dell'hotspot è la variabile `hotspot_ssid` del template
+  (default `NINUX Free WiFi`): si cambia nella copia del template di ogni
+  organizzazione o nelle variabili del singolo router.
+- Nel YAML dell'organizzazione il campo di login è `type: "text"`, così si
+  entra con email, numero di telefono o nome utente: serve per i voucher del
+  [capitolo 8](voucher.md). Con `type: "email"` il browser rifiuta i nomi utente.
 
 ### 7. Topology Babel
 

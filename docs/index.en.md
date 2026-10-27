@@ -26,6 +26,7 @@ put them together, how they connect and why they are made this way.
 | [openwisp-config](https://github.com/mikysal78/openwisp-config) | Fork of the OpenWISP agent of the routers, with our fixes | [Modules](moduli.md) |
 | [ansible-ninux-openwrt](https://github.com/mikysal78/ansible-ninux-openwrt) | NINUX OpenWrt firmware build with Ansible and Jenkins, upload to the firmware upgrader | [Firmware and Jenkins](firmware.md) |
 | [openwisp-android](https://github.com/mikysal78/openwisp-android) | Android app to manage OpenWISP | [Android app](app.md) |
+| [openwisp-voucher](https://github.com/mikysal78/openwisp-voucher) | Desktop program that creates and prints time-limited Wi-Fi accounts for the captive portal | [Time-limited Wi-Fi access](voucher.md) |
 
 ## Rebuild order
 
@@ -36,6 +37,7 @@ put them together, how they connect and why they are made this way.
 - [ ] **Firmware**: Jenkins, first build, images in the firmware upgrader ([chapter 5](firmware.md))
 - [ ] **Routers**: flashing, automatic registration, templates, mesh ([chapter 6](router.md))
 - [ ] **App**: installation and login ([chapter 7](app.md))
+- [ ] **Vouchers**: RADIUS group for guests and the time-limited access program ([chapter 8](voucher.md))
 
 The [Operations](gestione.md) page collects updates, backups, security and
 problems we have already met.
