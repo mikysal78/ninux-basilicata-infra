@@ -55,6 +55,12 @@ sistema.
 | Pagina di login che accetta il **nome utente** | `login_form.input_fields.username.type: "text"` nel YAML dell'organizzazione (vedi [capitolo 3](openwisp.md)) |
 | Utenti operatori (reception) | staff, gestori dell'organizzazione, permessi elencati nel [README](https://github.com/mikysal78/openwisp-voucher/blob/main/README.it.md#utenti-operatori) |
 
+L'ospite si collega alla rete dell'hotspot e, nella pagina del portale che si
+apre da sola, scrive nome utente e password del biglietto nel campo «Email,
+numero di telefono o nome utente».
+
+![Pagina di login del portale Wi-Fi di NINUX Basilicata](assets/voucher/login-it.png){ width="320" }
+
 !!! warning "Email degli ospiti"
     OpenWISP vuole un'email diversa per ogni utente. Con un'email già usata
     openwisp-radius 1.3 risponde con un errore 500 generico: il programma la

@@ -55,6 +55,12 @@ only used to obtain the token, which goes into the system keyring.
 | Login page that accepts the **username** | `login_form.input_fields.username.type: "text"` in the organization YAML (see [chapter 3](openwisp.md)) |
 | Operator users (reception) | staff, organization managers, permissions listed in the [README](https://github.com/mikysal78/openwisp-voucher#operator-accounts) |
 
+The guest joins the hotspot network and, on the portal page that opens by
+itself, types the ticket's username and password in the "Email, phone number
+or username" field.
+
+![Login page of the NINUX Basilicata Wi-Fi portal](assets/voucher/login-en.png){ width="320" }
+
 !!! warning "Guest email"
     OpenWISP wants a different email for each user. With an email already in
     use openwisp-radius 1.3 answers with a generic 500 error: the program
