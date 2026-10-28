@@ -6,6 +6,14 @@ repo_name: mikysal78/ninux-basilicata-infra
 edit_uri: edit/main/docs/
 copyright: NINUX Basilicata — testi CC BY-SA 4.0
 
+# Le pagine italiane sono anche su ninux-nnxx.it/guida/: il canonical va là
+# (hooks/canonical.py), cosi' Google indicizza il sito di Ninux
+extra:
+  canonical_wordpress: https://ninux-nnxx.it/guida/
+
+hooks:
+  - hooks/canonical.py
+
 theme:
   name: material
   language: it
