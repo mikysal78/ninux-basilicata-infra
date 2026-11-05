@@ -90,6 +90,22 @@ Poi, nell'admin:
    nei router per comandi, aggiornamenti firmware e LuCI. Attiva
    **auto add**, così viene assegnata da sola a ogni nuovo device (la nostra si
    chiama *OpenWISP Default Ssh*).
+4. **Tema LuCI dei router**: il firmware NINUX (tutti i device tranne x86) ha
+   il tema [luci-theme-ninux](https://github.com/mikysal78/luci-theme-ninux),
+   con l'interruttore **Base / Avanzato**. In *Base* chi usa il router vede solo
+   le pagine essenziali (panoramica, Wi-Fi, interfacce, password, backup e
+   riavvio), senza le opzioni da esperti; in *Avanzato* c'è tutto LuCI. Logo,
+   nome e colori si scelgono per tutti nel playbook (`ninux_luci_logo`,
+   `ninux_luci_brand`, `ninux_luci_accent`, `ninux_luci_accent_dark`), che li
+   passa a OpenWISP come variabili globali `luci_*`; arrivano ai router con il
+   template **Tema LuCI ninux** del [passo 5](#5-template-dei-router). Per un
+   solo router si sovrascrivono nelle sue variabili, e `luci_mode` (`basic` o
+   `advanced`) sceglie la modalità con cui si apre LuCI.
+
+   ![LuCI con il tema ninux in modalità Base](assets/luci-theme-ninux.png)
+
+   La modalità Base semplifica l'interfaccia ma non è un controllo di accesso:
+   i permessi restano quelli degli utenti di LuCI.
 
 ### 4. VPN ZeroTier
 
@@ -134,6 +150,7 @@ mano.
 | Hotspot uspot 2.4GHz | no | no | captive portal con RADIUS |
 | Netconsole, usteer, Uplink LAN su wan | no | no | vedi il [capitolo 6](router.md) |
 | Router di confine | no | no | config completa del router x86 di confine |
+| Tema LuCI ninux | no | no | logo, nome, colori e modalità del tema LuCI (variabili `luci_*`) |
 
 Nel template della mesh, la variabile `mesh_password` va nei *default values*
 del template in OpenWISP: nel repository pubblico c'è solo `{{ mesh_password }}`.
