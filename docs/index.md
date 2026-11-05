@@ -23,8 +23,10 @@ insieme, come si collegano e perché sono fatti così.
 | [openwisp2](https://github.com/mikysal78/openwisp2) | Server OpenWISP completo: controller, monitoring, RADIUS, topology, firmware upgrader, pagine Wi-Fi, VPN ZeroTier, Babel, log dei router, proxy LuCI | [OpenWISP](openwisp.md) |
 | [openwisp-netconsole](https://github.com/mikysal78/openwisp-netconsole) | Scheda «Netconsole» nella pagina del device e rotazione dei log | [Moduli](moduli.md) |
 | [openwisp-luci](https://github.com/mikysal78/openwisp-luci) | Pulsante «LuCI» nella pagina del device, con proxy autenticato | [Moduli](moduli.md) |
+| [openwisp-luci-theme](https://github.com/mikysal78/openwisp-luci-theme) | Riquadro «Tema LuCI dei router» nella pagina dell'organizzazione: logo (con upload), nome, colori e modalità Base/Avanzato | [Moduli](moduli.md) |
 | [openwisp-config](https://github.com/mikysal78/openwisp-config) | Fork dell'agente OpenWISP dei router, con le nostre correzioni | [Moduli](moduli.md) |
 | [ansible-ninux-openwrt](https://github.com/mikysal78/ansible-ninux-openwrt) | Compilazione del firmware OpenWrt NINUX con Ansible e Jenkins, caricamento nel firmware upgrader | [Firmware e Jenkins](firmware.md) |
+| [luci-theme-ninux](https://github.com/mikysal78/luci-theme-ninux) | Tema LuCI leggero dei router, con le modalità Base (semplificata, come nei router commerciali) e Avanzato | [OpenWISP](openwisp.md#3-primo-accesso), [Firmware e Jenkins](firmware.md) |
 | [openwisp-android](https://github.com/mikysal78/openwisp-android) | App Android per gestire OpenWISP | [App Android](app.md) |
 | [openwisp-voucher](https://github.com/mikysal78/openwisp-voucher) | Programma per computer che crea e stampa accessi Wi-Fi a tempo per il captive portal | [Accessi Wi-Fi a tempo](voucher.md) |
 

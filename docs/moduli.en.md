@@ -66,6 +66,10 @@ Each organization picks logo, name, colours and Basic/Advanced mode of the
 - **Uploaded logo**: SVG (best), PNG, JPEG, WebP or GIF up to 32 KB. It reaches
   the router inside its configuration, as a `data:` URI: it shows even without
   Internet. SVGs with scripts or external references are rejected.
+- **Logo size**: LuCI shows it 28 pixels high and at most 220 wide (24 × 150 on
+  phones), so use a horizontal logo, up to about 8 times wider than high,
+  without empty margins. For PNG, JPEG, WebP and GIF use double size, 56 × 440
+  at most, so it stays sharp on high-density screens.
 - **Empty fields**: keep the global value of the playbook (`ninux_luci_*`).
   Variables set on a single device still win.
 - **Router update**: saving the box makes OpenWISP recompute the configuration
@@ -73,6 +77,17 @@ Each organization picks logo, name, colours and Basic/Advanced mode of the
   **Tema LuCI ninux** template must be assigned to the routers.
 - **Permissions**: superusers and the *Administrator* group edit, *Operator*
   views.
+- **Example**: the *Basilicata* organization has the Ninux logo, the name
+  "NINUX Basilicata", Ninux orange (`#d93d1c`, dark `#ff6a45`) and Basic mode.
+  The test WRT3200ACM received it by itself a couple of minutes after saving.
+
+!!! note "Where the values come from"
+    Global context of the playbook → organization and group variables → **theme
+    box** → device variables (they win). The **Tema LuCI ninux** template has
+    no *default values* on purpose: OpenWISP would copy them into the variables
+    of every device, where they would win over the box. The values for
+    everyone (`ninux_luci_mode`, `ninux_luci_allow_advanced` and the other
+    `ninux_luci_*`) are in the playbook, `context` tag.
 
 ## openwisp-config (fork)
 

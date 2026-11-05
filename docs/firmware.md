@@ -2,8 +2,10 @@
 
 I router usano un firmware **OpenWrt NINUX** compilato da noi: contiene i
 pacchetti della rete (BIRD, ZeroTier, uspot, netconsole…), l'agente
-openwisp-config già configurato per registrarsi da solo al nostro OpenWISP e
-le impostazioni di base (utenti, firewall).
+openwisp-config già configurato per registrarsi da solo al nostro OpenWISP, le
+impostazioni di base (utenti, firewall) e, su tutti i device tranne x86, il
+tema LuCI [luci-theme-ninux](https://github.com/mikysal78/luci-theme-ninux)
+con le modalità Base e Avanzato ([capitolo 3](openwisp.md#3-primo-accesso)).
 
 La compilazione la fa il repository
 [ansible-ninux-openwrt](https://github.com/mikysal78/ansible-ninux-openwrt):
@@ -79,6 +81,14 @@ Tutta la configurazione della build sta in `ninux.yml` (da `ninux.yml.example`):
   ([capitolo 6](router.md));
 - il feed dell'agente openwisp-config (il nostro fork, in `config/build.yml`, [capitolo 4](moduli.md)).
 
+In `config/build.yml` c'è anche il feed `ninux_theme` del tema LuCI. Le
+correzioni ai feed di OpenWrt stanno in
+`roles/ninux_build_openwrt/files/feed-patches/<feed>/`: oggi c'è la patch di
+`form.js` di luci-base, che toglie l'errore `RPCError … uci/get … Access
+denied` dalla console della pagina di login. Viene da LuCI master e non è
+ancora nella 25.12. Se una release la rende inutile e la patch non si applica
+più, la build si ferma con un errore chiaro: a quel punto va tolta.
+
 I valori segreti si cifrano con ansible-vault, uno per uno:
 
 ```bash
@@ -94,6 +104,17 @@ Ogni modello di router ha il suo file in
 `config/organizations/<org>/<device>.config`. Per un modello nuovo, o per una
 nuova organizzazione, segui
 [Aggiungere device e organizzazioni](https://github.com/mikysal78/ansible-ninux-openwrt/blob/main/README.it.md#aggiungere-device-e-organizzazioni).
+Nel `.config` di un device nuovo, tranne gli x86, aggiungi anche la riga del
+tema LuCI:
+
+```
+CONFIG_PACKAGE_luci-theme-ninux=y
+```
+
+Il tema **si aggiunge** a quelli di LuCI, non li sostituisce: Bootstrap resta
+nel firmware. Alla prima accensione diventa il tema predefinito; si torna a
+Bootstrap da *Sistema → Sistema → Lingua e stile*, e un aggiornamento del
+firmware non cambia la scelta fatta.
 
 ## 5. Firmware upgrader
 

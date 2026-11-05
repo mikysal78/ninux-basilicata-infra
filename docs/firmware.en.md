@@ -2,8 +2,10 @@
 
 The routers run a **NINUX OpenWrt** firmware built by us: it contains the
 network packages (BIRD, ZeroTier, uspot, netconsole…), the openwisp-config
-agent already set up to register by itself with our OpenWISP, and the base
-settings (users, firewall).
+agent already set up to register by itself with our OpenWISP, the base
+settings (users, firewall) and, on every device except x86, the
+[luci-theme-ninux](https://github.com/mikysal78/luci-theme-ninux) LuCI theme
+with Basic and Advanced modes ([chapter 3](openwisp.md#3-first-login)).
 
 The build is done by the
 [ansible-ninux-openwrt](https://github.com/mikysal78/ansible-ninux-openwrt)
@@ -79,7 +81,13 @@ The build configuration is in `ninux.yml` (from `ninux.yml.example`):
   ([chapter 6](router.md)).
 
 The openwisp-config agent feed (our fork, [chapter 4](moduli.md)) is in
-`config/build.yml`.
+`config/build.yml`, together with the `ninux_theme` feed of the LuCI theme.
+Fixes to the OpenWrt feeds live in
+`roles/ninux_build_openwrt/files/feed-patches/<feed>/`: today there is the
+luci-base `form.js` patch, which removes the `RPCError … uci/get … Access
+denied` from the console of the login page. It comes from LuCI master and is
+not in 25.12 yet. If a release makes it useless and the patch no longer
+applies, the build stops with a clear error: then remove it.
 
 Secret values are encrypted with ansible-vault, one by one:
 
@@ -96,6 +104,16 @@ Every router model has its own file in
 `config/organizations/<org>/<device>.config`. For a new model, or a new
 organization, follow
 [Adding devices and organizations](https://github.com/mikysal78/ansible-ninux-openwrt#adding-devices-and-organizations).
+In the `.config` of a new device, except x86, also add the LuCI theme line:
+
+```
+CONFIG_PACKAGE_luci-theme-ninux=y
+```
+
+The theme is **added** to the LuCI themes, it does not replace them: Bootstrap
+stays in the firmware. On first boot it becomes the default theme; switch back
+to Bootstrap from *System → System → Language and Style*, and a firmware
+upgrade does not change that choice.
 
 ## 5. Firmware upgrader
 
