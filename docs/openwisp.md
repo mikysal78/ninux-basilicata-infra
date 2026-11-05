@@ -98,9 +98,12 @@ Poi, nell'admin:
    nome e colori si scelgono per tutti nel playbook (`ninux_luci_logo`,
    `ninux_luci_brand`, `ninux_luci_accent`, `ninux_luci_accent_dark`), che li
    passa a OpenWISP come variabili globali `luci_*`; arrivano ai router con il
-   template **Tema LuCI ninux** del [passo 5](#5-template-dei-router). Per un
-   solo router si sovrascrivono nelle sue variabili, e `luci_mode` (`basic` o
-   `advanced`) sceglie la modalità con cui si apre LuCI.
+   template **Tema LuCI ninux** del [passo 5](#5-template-dei-router). Ogni
+   organizzazione li cambia, anche caricando il logo, nel riquadro **Tema LuCI
+   dei router** della sua pagina (modulo
+   [openwisp-luci-theme](moduli.md#openwisp-luci-theme)); un solo router nelle
+   sue variabili. `luci_mode` (`basic` o `advanced`) sceglie la modalità con
+   cui si apre LuCI, `luci_allow_advanced` (`1` o `0`) se c'è l'interruttore.
 
    ![LuCI con il tema ninux in modalità Base](assets/luci-theme-ninux.png)
 

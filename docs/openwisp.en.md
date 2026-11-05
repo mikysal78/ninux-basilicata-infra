@@ -100,8 +100,12 @@ Then, in the admin:
    `ninux_luci_brand`, `ninux_luci_accent`, `ninux_luci_accent_dark`), which
    passes them to OpenWISP as `luci_*` global variables; they reach the routers
    through the **Tema LuCI ninux** template of [step 5](#5-router-templates).
-   For a single router, override them in its variables; `luci_mode` (`basic`
-   or `advanced`) picks the mode LuCI opens with.
+   Each organization changes them, logo upload included, in the **LuCI theme
+   of the routers** box of its page
+   ([openwisp-luci-theme](moduli.md#openwisp-luci-theme) module); a single
+   router in its variables. `luci_mode` (`basic` or `advanced`) picks the mode
+   LuCI opens with, `luci_allow_advanced` (`1` or `0`) whether the switch is
+   shown.
 
    ![LuCI with the ninux theme in Basic mode](assets/luci-theme-ninux.png)
 

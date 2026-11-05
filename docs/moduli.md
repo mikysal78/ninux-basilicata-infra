@@ -1,9 +1,9 @@
 # 4. Moduli per OpenWISP
 
-Tre moduli nostri completano OpenWISP. I primi due sono piccole app Django che
-estendono la pagina del device; il terzo è l'agente che gira sui router.
-Il playbook openwisp2 installa già i primi due: questo capitolo spiega cosa
-fanno e cosa controllare.
+Quattro moduli nostri completano OpenWISP. I primi tre sono piccole app Django:
+due estendono la pagina del device, una quella dell'organizzazione; il quarto è
+l'agente che gira sui router. Il playbook openwisp2 installa già le tre app:
+questo capitolo spiega cosa fanno e cosa controllare.
 
 ## openwisp-netconsole
 
@@ -53,6 +53,26 @@ il router deve essere raggiungibile solo dal server, non dal browser.
     sessione di OpenWISP deve chiamarsi `__Host-sessionid`, che i sottodomini
     non possono sovrascrivere. Il playbook lo imposta.
 
+## openwisp-luci-theme
+
+[Repository](https://github.com/mikysal78/openwisp-luci-theme) ·
+riquadro **Tema LuCI dei router** nella pagina dell'organizzazione.
+
+Ogni organizzazione sceglie logo, nome, colori e modalità Base/Avanzato del
+[tema LuCI](openwisp.md#3-primo-accesso) sui suoi router.
+
+![Il riquadro nella pagina dell'organizzazione](assets/openwisp-luci-theme.png)
+
+- **Logo caricato**: SVG (meglio), PNG, JPEG, WebP o GIF fino a 32 KB. Arriva al
+  router dentro la configurazione, come `data:` URI: si vede anche senza
+  Internet. Gli SVG con script o riferimenti esterni vengono rifiutati.
+- **Campi vuoti**: lasciano il valore globale del playbook (`ninux_luci_*`).
+  Le variabili scritte nel singolo device vincono comunque.
+- **Aggiornamento dei router**: salvando il riquadro OpenWISP ricalcola la
+  configurazione dei device dell'organizzazione, che la scaricano al controllo
+  successivo. Serve il template **Tema LuCI ninux** assegnato ai router.
+- **Permessi**: superuser e gruppo *Administrator* modificano, *Operator* vede.
+
 ## openwisp-config (fork)
 
 [Repository](https://github.com/mikysal78/openwisp-config) · l'agente che gira
@@ -78,5 +98,6 @@ Quando la correzione arriverà upstream, si tornerà al pacchetto ufficiale.
 - [ ] Nella pagina di un device ci sono le schede/pulsanti **Netconsole** e **LuCI ↗**.
 - [ ] Netconsole mostra righe recenti per un router con il template Netconsole.
 - [ ] LuCI si apre (da superuser, già autenticata come `admin`).
+- [ ] Nella pagina dell'organizzazione c'è il riquadro **Tema LuCI dei router**.
 - [ ] `curl -X OPTIONS https://openwisp.ninux-nnxx.it/api/v1/luci/device/00000000-0000-0000-0000-000000000000/link/`
       risponde 405 (API presente) e non 404.

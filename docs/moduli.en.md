@@ -1,9 +1,9 @@
 # 4. OpenWISP modules
 
-Three modules of ours complete OpenWISP. The first two are small Django apps
-that extend the device page; the third is the agent that runs on the routers.
-The openwisp2 playbook already installs the first two: this chapter explains
-what they do and what to check.
+Four modules of ours complete OpenWISP. The first three are small Django apps:
+two extend the device page, one the organization page; the fourth is the agent
+that runs on the routers. The openwisp2 playbook already installs the three
+apps: this chapter explains what they do and what to check.
 
 ## openwisp-netconsole
 
@@ -53,6 +53,27 @@ needs to be reachable only from the server, not from the browser.
     session cookie must be called `__Host-sessionid`, which subdomains cannot
     overwrite. The playbook sets it.
 
+## openwisp-luci-theme
+
+[Repository](https://github.com/mikysal78/openwisp-luci-theme) ·
+**LuCI theme of the routers** box on the organization page.
+
+Each organization picks logo, name, colours and Basic/Advanced mode of the
+[LuCI theme](openwisp.md#3-first-login) on its routers.
+
+![The box on the organization page](assets/openwisp-luci-theme.png)
+
+- **Uploaded logo**: SVG (best), PNG, JPEG, WebP or GIF up to 32 KB. It reaches
+  the router inside its configuration, as a `data:` URI: it shows even without
+  Internet. SVGs with scripts or external references are rejected.
+- **Empty fields**: keep the global value of the playbook (`ninux_luci_*`).
+  Variables set on a single device still win.
+- **Router update**: saving the box makes OpenWISP recompute the configuration
+  of the organization's devices, which download it at their next check. The
+  **Tema LuCI ninux** template must be assigned to the routers.
+- **Permissions**: superusers and the *Administrator* group edit, *Operator*
+  views.
+
 ## openwisp-config (fork)
 
 [Repository](https://github.com/mikysal78/openwisp-config) · the agent running
@@ -79,4 +100,5 @@ When the fix lands upstream, we will go back to the official package.
 - [ ] Netconsole shows recent lines for a router with the Netconsole template.
 - [ ] LuCI opens (as a superuser, already logged in as `admin`).
 - [ ] `curl -X OPTIONS https://openwisp.ninux-nnxx.it/api/v1/luci/device/00000000-0000-0000-0000-000000000000/link/`
+- [ ] On the organization page there is the **LuCI theme of the routers** box.
       answers 405 (API present), not 404.
