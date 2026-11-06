@@ -216,4 +216,4 @@ and is encrypted in `ninux.yml` ([chapter 5](firmware.md)).
 - [ ] The Wi-Fi page answers on `https://wifi.ninux-nnxx.it/<slug>/`.
 - [ ] `systemctl status freeradius` is active.
 - [ ] The CT joined the ZeroTier network (`zerotier-cli listnetworks`).
-- [ ] `birdc show babel interfaces` lists the expected interfaces.
+- [ ] `birdcl show babel interfaces` lists the expected interfaces.

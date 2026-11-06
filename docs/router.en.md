@@ -70,6 +70,6 @@ unreachable until somebody goes there.
 ## Checklist
 
 - [ ] The device is in OpenWISP with configuration "applied" and monitoring "ok".
-- [ ] `birdc show babel neighbors` on the router shows the expected neighbours.
+- [ ] `birdcl show babel neighbors` on the router shows the expected neighbours.
 - [ ] The router appears in the "Babel NINUX" topology.
 - [ ] From a client of the router the LANs of the other nodes are reachable.

@@ -214,4 +214,4 @@ permessi sul firmware upgrader. Il token si ottiene con
 - [ ] La pagina Wi-Fi risponde su `https://wifi.ninux-nnxx.it/<slug>/`.
 - [ ] `systemctl status freeradius` è attivo.
 - [ ] Il CT ha fatto il join alla rete ZeroTier (`zerotier-cli listnetworks`).
-- [ ] `birdc show babel interfaces` elenca le interfacce attese.
+- [ ] `birdcl show babel interfaces` elenca le interfacce attese.

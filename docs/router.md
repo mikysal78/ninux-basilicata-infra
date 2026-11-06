@@ -70,6 +70,6 @@ resta irraggiungibile finché qualcuno non va sul posto.
 ## Controllo
 
 - [ ] Il device è in OpenWISP con configurazione «applicata» e monitoring «ok».
-- [ ] `birdc show babel neighbors` sul router mostra i vicini attesi.
+- [ ] `birdcl show babel neighbors` sul router mostra i vicini attesi.
 - [ ] Il router compare nella topology «Babel NINUX».
 - [ ] Da un client del router si raggiungono le LAN degli altri nodi.
