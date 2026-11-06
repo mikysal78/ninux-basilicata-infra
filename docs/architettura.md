@@ -5,7 +5,7 @@
 ```mermaid
 flowchart TB
     internet((Internet))
-    subgraph sede["Sede ReginaMargherita116"]
+    subgraph sede["Sede di Salandra"]
         confine["Router di confine x86<br/>OpenWrt NINUX<br/>10.27.22.1 · 194.28.98.57"]
         subgraph pve["Proxmox VE"]
             ow["CT OpenWISP<br/>10.27.22.18 · 194.28.98.61<br/>controller, RADIUS, VPN ZeroTier,<br/>Babel, log dei router, proxy LuCI"]
